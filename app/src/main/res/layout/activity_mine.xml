@@ -66,7 +66,10 @@
                 android:id="@+id/login_box"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="12dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="20dp"
                 android:elevation="2dp"
                 android:background="@drawable/shape_round_white"
                 app:layout_constraintTop_toBottomOf="@id/iv_edit"
@@ -76,7 +79,7 @@
                     android:id="@+id/iv_head"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="13dp"
                     android:background="@mipmap/default_head"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent" />
@@ -97,14 +100,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="成就你的写作梦想"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="@id/iv_head"
                     app:layout_constraintLeft_toLeftOf="@id/tv_login"
                     android:layout_marginBottom="5dp"/>
 
                 <ImageView
                     android:id="@+id/iv_gift"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:background="@mipmap/gift"
                     app:layout_constraintTop_toTopOf="@id/iv_head"
                     app:layout_constraintBottom_toBottomOf="@id/iv_head"
@@ -122,7 +126,7 @@
                     android:paddingBottom="1dp"
                     app:layout_constraintLeft_toLeftOf="@id/iv_gift"
                     app:layout_constraintRight_toRightOf="@id/iv_gift"
-                    app:layout_constraintBottom_toBottomOf="@id/iv_gift"
+                    app:layout_constraintTop_toBottomOf="@id/iv_gift"
                     android:background="@drawable/shape_roung_perple"
                     android:textColor="@color/white"/>
 
@@ -139,7 +143,6 @@
                     android:id="@+id/view_menu1"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    app:layout_constraintDimensionRatio="100:120"
                     app:layout_constraintTop_toBottomOf="@id/view_line"
                     app:layout_constraintRight_toLeftOf="@id/view_menu2"
                     app:layout_constraintLeft_toLeftOf="parent"/>
@@ -148,7 +151,6 @@
                     android:id="@+id/view_menu2"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    app:layout_constraintDimensionRatio="100:120"
                     app:layout_constraintTop_toBottomOf="@id/view_line"
                     app:layout_constraintLeft_toRightOf="@id/view_menu1"
                     app:layout_constraintRight_toLeftOf="@id/view_menu3"/>
@@ -157,7 +159,6 @@
                     android:id="@+id/view_menu3"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    app:layout_constraintDimensionRatio="100:120"
                     app:layout_constraintTop_toBottomOf="@id/view_line"
                     app:layout_constraintLeft_toRightOf="@id/view_menu2"
                     app:layout_constraintRight_toRightOf="@id/view_menu4"/>
@@ -166,17 +167,16 @@
                     android:id="@+id/view_menu4"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    app:layout_constraintDimensionRatio="100:120"
                     app:layout_constraintTop_toBottomOf="@id/view_line"
                     app:layout_constraintLeft_toRightOf="@id/view_menu3"
                     app:layout_constraintRight_toRightOf="parent"/>
 
                 <ImageView
                     android:id="@+id/iv_ic1"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@mipmap/pic1"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="14dp"
                     app:layout_constraintLeft_toLeftOf="@id/view_menu1"
                     app:layout_constraintRight_toRightOf="@id/view_menu1"
                     app:layout_constraintTop_toTopOf="@id/view_menu1"/>
@@ -204,10 +204,10 @@
 
                 <ImageView
                     android:id="@+id/iv_ic2"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@mipmap/pic2"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="14dp"
                     app:layout_constraintLeft_toLeftOf="@id/view_menu2"
                     app:layout_constraintRight_toRightOf="@id/view_menu2"
                     app:layout_constraintTop_toTopOf="@id/view_menu2"/>
@@ -235,10 +235,10 @@
 
                 <ImageView
                     android:id="@+id/iv_ic3"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@mipmap/pic3"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="14dp"
                     app:layout_constraintLeft_toLeftOf="@id/view_menu3"
                     app:layout_constraintRight_toRightOf="@id/view_menu3"
                     app:layout_constraintTop_toTopOf="@id/view_menu3"/>
@@ -254,22 +254,12 @@
                     app:layout_constraintLeft_toLeftOf="@id/view_menu3"
                     app:layout_constraintRight_toRightOf="@id/view_menu3"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0个赞和收藏"
-                    android:layout_marginTop="5dp"
-                    android:textSize="11sp"
-                    app:layout_constraintTop_toBottomOf="@id/tv_my_sticker"
-                    app:layout_constraintLeft_toLeftOf="@id/view_menu3"
-                    app:layout_constraintRight_toRightOf="@id/view_menu3"/>
-
                 <ImageView
                     android:id="@+id/iv_ic4"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@mipmap/pic4"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="14dp"
                     app:layout_constraintLeft_toLeftOf="@id/view_menu4"
                     app:layout_constraintRight_toRightOf="@id/view_menu4"
                     app:layout_constraintTop_toTopOf="@id/view_menu4"/>
@@ -306,6 +296,11 @@
                 android:elevation="2dp"
                 android:padding="12dp">
 
+                <androidx.constraintlayout.widget.Group
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="tv_assets,tv_check,view_line2"/>
+
                 <TextView
                     android:id="@+id/tv_assets"
                     android:layout_width="wrap_content"
@@ -316,13 +311,16 @@
                     app:layout_constraintTop_toTopOf="parent"/>
 
                 <TextView
+                    android:id="@+id/tv_check"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="查看"
+                    android:textSize="12sp"
+                    android:gravity="center_vertical"
                     android:drawableRight="@mipmap/arrow_right"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:drawablePadding="10dp"/>
+                    android:drawablePadding="8dp"/>
 
                 <View
                     android:id="@+id/view_line2"
@@ -371,13 +369,13 @@
 
                 <ImageView
                     android:id="@+id/iv_dimends"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@mipmap/dimends"
                     app:layout_constraintTop_toTopOf="@id/view_diamends"
                     app:layout_constraintLeft_toLeftOf="@id/view_diamends"
                     app:layout_constraintRight_toRightOf="@id/view_diamends"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="15dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -387,17 +385,17 @@
                     app:layout_constraintLeft_toLeftOf="@id/view_diamends"
                     app:layout_constraintRight_toRightOf="@id/view_diamends"
                     app:layout_constraintTop_toBottomOf="@id/iv_dimends"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="8dp"/>
 
                 <ImageView
                     android:id="@+id/iv_vip"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@mipmap/vip"
                     app:layout_constraintTop_toTopOf="@id/view_vip"
                     app:layout_constraintLeft_toLeftOf="@id/view_vip"
                     app:layout_constraintRight_toRightOf="@id/view_vip"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="15dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -407,17 +405,17 @@
                     app:layout_constraintLeft_toLeftOf="@id/view_vip"
                     app:layout_constraintRight_toRightOf="@id/view_vip"
                     app:layout_constraintTop_toBottomOf="@id/iv_vip"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="8dp"/>
 
                 <ImageView
                     android:id="@+id/iv_prize"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@mipmap/prize"
                     app:layout_constraintTop_toTopOf="@id/view_prize"
                     app:layout_constraintLeft_toLeftOf="@id/view_prize"
                     app:layout_constraintRight_toRightOf="@id/view_prize"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="15dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -427,17 +425,17 @@
                     app:layout_constraintLeft_toLeftOf="@id/view_prize"
                     app:layout_constraintRight_toRightOf="@id/view_prize"
                     app:layout_constraintTop_toBottomOf="@id/iv_prize"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="8dp"/>
 
                 <ImageView
                     android:id="@+id/iv_rank"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@mipmap/rank"
                     app:layout_constraintTop_toTopOf="@id/view_rank"
                     app:layout_constraintLeft_toLeftOf="@id/view_rank"
                     app:layout_constraintRight_toRightOf="@id/view_rank"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="15dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -447,7 +445,7 @@
                     app:layout_constraintLeft_toLeftOf="@id/view_rank"
                     app:layout_constraintRight_toRightOf="@id/view_rank"
                     app:layout_constraintTop_toBottomOf="@id/iv_rank"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="8dp"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
